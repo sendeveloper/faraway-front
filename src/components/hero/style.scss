@@ -1,0 +1,133 @@
+.hero {
+  width: 100%;
+  padding: 0 calc((100vw - 1500px) / 2);
+
+  & > h1 {
+    color: white;
+    font-size: 62px;
+    text-align: center;
+    margin: 0;
+    .highlight {
+      color: #f09b3b;
+    }
+  }
+  &-wallet {
+    width: 100%;
+    align-items: center;
+    z-index: 2;
+
+    &-purchase {
+      width: 100%;
+      padding: 12px;
+      background-color: #fad121;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 16px;
+
+      & > select {
+        border-radius: 100px;
+        font-size: 24px;
+        font-weight: bold;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        background-color: #6449ca;
+        color: white;
+        cursor: pointer;
+        transition: 1s;
+        margin: 10px;
+        padding: 16px 24px;
+        & > option {
+          border-radius: 100px;
+        }
+      }
+
+      &-ticker {
+        align-items: center;
+
+        & > span {
+          font-size: 24px !important;
+          font-weight: bold;
+          white-space: nowrap;
+
+          & > span {
+            color: #d80073;
+          }
+        }
+
+        & > span {
+          font-size: 18px;
+          font-weight: bold;
+          margin-right: 24px;
+        }
+
+        &-counts {
+          font-size: 32px !important;
+        }
+
+        & > p {
+          max-width: 360px;
+          font-size: 20px;
+          text-align: center;
+          line-height: 24px;
+          font-weight: bold;
+        }
+      }
+
+      & > div {
+        border-radius: 100px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    & > div {
+      padding: 0 32px;
+    }
+
+    &-wallet {
+      padding: 0 32px;
+
+      &-purchase {
+        &-ticker {
+          flex-direction: column !important;
+
+          & > span {
+            white-space: normal;
+            text-align: center;
+          }
+
+          & > span {
+            margin: 0 0 12px;
+          }
+
+          & > p {
+            margin: 0;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    & > div {
+      padding: 0 8px;
+    }
+
+    &-wallet {
+      padding: 0 8px;
+
+      &-purchase {
+        padding: 16px;
+        flex-direction: column !important;
+
+        &-ticker {
+          margin-bottom: 32px;
+        }
+      }
+    }
+  }
+}
